@@ -6,13 +6,12 @@
   <title>Change Message Example</title>
   <script>
     function changeMessage() {
-      // Select the <p> element by its ID (assuming you give it an ID of 'message')
       const pElement = document.getElementById('message');
       pElement.textContent = 'Hello! You clicked the button!';}
   </script>
 </head>
 <body>
-  <p id="message">This is the original message.</p>
+  <p id="message">Click the button to see a message.</p>
   <button onclick="changeMessage()">Click Me!</button>
 </body>
 </html>
