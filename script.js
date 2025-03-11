@@ -35,7 +35,7 @@ const hiddenText = document.getElementById("hiddentext");
 
 if (toggleButton && hiddenText) {
     toggleButton.addEventListener("click", function () {
-      if (hiddenText.style.display = "none") {
+      if (hiddenText.style.display == "none") {
          hiddenText.style.display = "block";
         toggleButton.textContent = "Hide Text"; 
         } else {
