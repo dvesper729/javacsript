@@ -5,7 +5,7 @@ messageButton.addEventListener('click', function() {
 })
 
 const colors = ['darkslategrey', 'darkred', 'cadetblue', 'blanchedalmond', 'coral']
-function changebackgroundcolor() {
+function changeBackgroundColor() {
   const bodyElement = document.body
   const randomColor = colors[Math.floor(Math.random() * colors.length)]
   bodyElement.style.backgroundColor = randomColor
@@ -18,4 +18,10 @@ function namegreeting() {
     let name = document.getElementById("nameentry").value
     let greetingMessage = "Hello, " + name + "!"
     document.getElementById("greeting").textContent = greetingMessage
+}
+const nameentrybutton = document.getElementById('nameentrybutton')
+nameentrybutton.addEventListener('click', function() {
+  let name = document.getElementById("name").value
+  const pElement = document.getElementById('greeting')
+  pElement.textContent = 'Hello, ' + name + '!'
 }
