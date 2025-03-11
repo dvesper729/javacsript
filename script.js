@@ -26,4 +26,15 @@ nameentrybutton.addEventListener("click", displayGreeting);
 document.querySelector("form").addEventListener("submit", function(event) {
     event.preventDefault();
     displayGreeting();
-});
+})
+const toggleButton = document.getElementById("showhidetextButton");
+    const hiddenText = document.getElementById("hiddentext");
+
+    toggleButton.addEventListener("click", function () {
+      if (hiddenText.style.display === "none") {
+        hiddenText.style.display = "block";
+        toggleButton.textContent = "Hide Text"; 
+      } 
+      else {hiddenText.style.display = "none";
+            toggleButton.textContent = "Show Text";}
+}
