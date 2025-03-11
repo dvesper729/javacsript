@@ -21,20 +21,26 @@ function displayGreeting() {
 }
 
 const nameentrybutton = document.getElementById('nameentrybutton');
-nameentrybutton.addEventListener("click", displayGreeting);
+if (nameentrybutton) {
+    nameentrybutton.addEventListener("click", displayGreeting);
+}
 
 document.querySelector("form").addEventListener("submit", function(event) {
     event.preventDefault();
     displayGreeting();
-})
-const toggleButton = document.getElementById("showhidetextButton");
-    const hiddenText = document.getElementById("hiddentext");
+});
 
+const toggleButton = document.getElementById("showhidetextButton");
+const hiddenText = document.getElementById("hiddentext");
+
+if (toggleButton && hiddenText) {
     toggleButton.addEventListener("click", function () {
       if (hiddenText.style.display === "none") {
-        hiddenText.style.display = "block";
+         hiddenText.style.display = "block";
         toggleButton.textContent = "Hide Text"; 
-      } 
-      else {hiddenText.style.display = "none";
-            toggleButton.textContent = "Show Text";}
+        } else {
+        hiddenText.style.display = "none";
+        toggleButton.textContent = "Show Text";
+    }
+ });
 }
